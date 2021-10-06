@@ -11,25 +11,28 @@ class App extends Component {
             {title: 'The First and Last Freedom', author: 'Jiddu Krishnamurit'},
         ];
         this.state = {
-            bookNumber: 0
+            bookNumber: 1
         };
     }
 
-    render(){
+    render() {
         return (
-        <div className="container-fluid">
-            <TitleBar/>
-            <div className="col-md-4">
-                {/*Button here to move to the previous book viewed*/}
-            </div>
-            <div className="col-md-4">
-                {/*Display book with cover here*/}
-                <h1>{this.books[this.state.bookNumber].title}</h1>
-                <h4
-            </div> 
-            <div className="col-md-4"></div>
-                {/*Button here to move to the next book viewed*/}  
-        </div>    
+            <div className="container-fluid">
+                <TitleBar />
+                <div className="row">
+                <div className="col-md-4">
+                    {/*Button here to move to the previous book viewed*/}
+                </div>
+                <div className="col-md-4">
+                    {/*Display book with cover here*/}
+                    <h1>{this.books[this.state.bookNumber].title}</h1>
+                    <h4>{this.books[0].author}</h4>
+                </div> 
+                <div className="col-md-4">
+                    {/*Button here to move to the next book viewed*/} 
+                </div> 
+                </div>
+            </div>   
         )
     }
 }
